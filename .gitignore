@@ -1,0 +1,8 @@
+# Dépendances du projet
+node_modules/
+
+# Dossier de production
+dist/
+
+# Logs
+npm-debug.log*
