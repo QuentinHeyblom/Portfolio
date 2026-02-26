@@ -4,23 +4,29 @@ const Accueil = () => {
   return (
     <div className="accueil-container">
       {/* Présentation */}
-      <section className="hero-section">
-        <div className="hero-text">
-          <h1>Bonjour, je suis <span>Quentin</span></h1>
-          <h2>Développeur Web Junior</h2>
-          <p>
-            Actuellement en niveau Bac+2, je suis passionné par le développement web.
-            Découvrez mon parcours, mes compétences et mes réalisations.
-          </p>
-          <div className="hero-buttons">
-            <a href="#projets" className="btn-primary">Mes Projets</a>
-            <a href="#contact" className="btn-secondary">Me Contacter</a>
+      <div className="hero-wrapper">
+
+        <div className="hero-glow glow-1"></div>
+        <div className="hero-glow glow-2"></div>
+
+        <section className="hero-section">
+          <div className="hero-text">
+            <h1>Bonjour, je suis <span>Quentin</span></h1>
+            <h2>Développeur Web Junior</h2>
+            <p>
+              Actuellement en niveau Bac+2, je suis passionné par le développement web.
+              Découvrez mon parcours, mes compétences et mes réalisations.
+            </p>
+            <div className="hero-buttons">
+              <a href="#projets" className="btn-primary">Mes Projets</a>
+              <a href="#contact" className="btn-secondary">Me Contacter</a>
+            </div>
           </div>
-        </div>
-        <div className="hero-image">
-          <img src="/public/tete/tete.jpg" alt="Photo de profil" />
-        </div>
-      </section>
+          <div className="hero-image">
+            <img src="/public/tete/tete.jpg" alt="Photo de profil" />
+          </div>
+        </section>
+      </div>
 
       {/* Stacks */}
       <section id="competences" className="content-section">
