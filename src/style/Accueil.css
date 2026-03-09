@@ -193,6 +193,139 @@
   border-radius: 2px;
 }
 
+/* --- Design Créatif Compétences : Glass Panels & Glowing Pills --- */
+.creative-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-panel {
+  background: rgba(44, 93, 102, 0.15);
+  /* #2c5d66 with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 180, 184, 0.2);
+  /* #63b4b8 glowing border */
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #63b4b8, transparent);
+}
+
+.skill-panel:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 180, 184, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 180, 184, 0.15) inset;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.panel-icon {
+  font-size: 2.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.skill-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.node-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(26, 61, 68, 0.5);
+  /* #1a3d44 mix */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-radius: 50px;
+  /* Pill shape */
+  transition: all 0.3s ease;
+}
+
+.node-item:hover {
+  background: rgba(99, 180, 184, 0.15);
+  border-color: rgba(99, 180, 184, 0.5);
+  transform: scale(1.05) translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.node-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.node-item:hover img {
+  border-color: #63b4b8;
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-info h4 {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.node-info span {
+  color: #63b4b8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .skill-nodes {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Placeholders */
 .placeholder-block {
   background-color: rgba(255, 255, 255, 0.03);
