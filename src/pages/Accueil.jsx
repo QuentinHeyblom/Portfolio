@@ -51,7 +51,7 @@ const Accueil = () => {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
             <div className="hero-image-modern">
-              <img src="/public/tete/tete.jpg" alt="Photo de profil de Quentin" />
+              <img src="/tete/tete.jpg" alt="Photo de profil de Quentin" />
             </div>
           </motion.div>
         </section>
